@@ -7,6 +7,7 @@ puts "Creating 100 restaurants..."
   restaurant = Restaurant.create!(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
+    chef_name: %w[holly luis alex anne-marie daniel].sample,
     rating: rand(1..5)
   )
   puts "Restaurant #{restaurant.id} was created"
